@@ -1,0 +1,290 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+header{
+    width: 100;
+}
+h1{
+    margin: 30px 0 50px 0;
+    text-transform: uppercase;
+    color: rgb(227, 227, 235);
+    text-align: center;
+}
+header >ul{
+    display: flex;
+    /* background-color: rgb(250, 242, 242); */
+    padding: 20px
+}
+li{
+    list-style: none;
+    padding: 20px;
+}
+li:hover{
+	background-color: rgb(196, 67, 67);
+}
+.drop-trigger:hover .drop{
+    display: block;
+    background-color: rgb(112, 62, 161);
+    outline: none;
+    position: absolute;
+}
+.drop{
+    position: absolute;
+    display: none;
+    box-shadow: 0px 8px 16px 0px rgba(192, 167, 167, 0.2);
+    z-index: 1;
+    background-color: rgb(230, 243, 255);
+}
+body{
+    background-image: url(..//img/pemandangan.jpg);
+}
+
+h2{
+    font-family: sans-serif;
+    font-weight: normal;
+    background-image: linear-gradient(45deg, #13467b, #1c9641);
+    color: #ffffff;
+    padding: 10px;
+}
+
+.navbar-slider{
+    border: 10px solid #efefef;
+    position: relative;
+    overflow: hidden;
+    background: #efefef;
+}
+
+.navbar-slider{
+    margin: 20px auto;
+    width: 768px;
+    height: 450px;
+}
+
+.isi-slider img{
+    width: 800px;
+    height: 450;
+    float: left;
+}
+
+.isi-slider{
+    position: absolute;
+	width: 3200px;
+	
+	
+	
+
+/* pengaturan durasi lama tampil gambar bisa di atur dibawah ini */
+
+animation-name:slider;
+animation-duration:16s;
+animationt-timing-function:ease-in-out;
+animation-iteration-count:infinite;
+-webkit-animation-name:slider;
+-webki-animation-duration:16s;
+-webkit-animation-timing-function:ease-in-out;
+-webkit-animation-iteration-count:infinite;
+-moz-animation-name:slider;
+-moz-animation-duration:16s;
+-moz-animation-timing-function:ease-in-out;
+-moz-animation-iteration-count:infinite;
+-o-animation-name:slider;
+-o-animation-duration:16s;
+-o-animation-timing-function: ease-in-out;
+-o-animation-iteration-count:infinite;
+}
+
+/* saat gambar dihover oleh cursor mouse maka berhenti slide */
+
+.isi-slider:hover;{
+    -webkit-animation-play-state:paused;
+    -moz-animation-play-state:paused;
+    -o-animation-play-state:paused;
+    animation-play-state:paused;
+}
+
+.isi-slider img{
+    float: right;
+}
+
+.navbar-slider::after;{
+    font-size: 150px;
+    position: absolute;
+    z-index: 12;
+    color: rgba(255,255,255,0)
+    left: 300px; top: 80px;
+    transition: 1s all ease-in-out;
+    -webkit-transition: 1s all ease-in-out;
+    -moz-transition: 1s all ease-in-out;
+    -o-transition: ease-in-out;
+    
+}
+
+.navbar-slider:hover:after;{
+    color: rgba(255,255,255,0.6)
+}
+
+@-moz-keyframes slider{
+    0% {
+        left: 0; opacity: 0;
+    }
+    2% {
+        opacity: 1;
+    }
+    20% {
+        left: 0; opacity: 1;
+    }
+    21% {
+        opacity: 0;
+    }
+    24%{
+        opacity: 0;
+    }
+    25% {
+        left: -768px; opacity: 1;
+    }
+    45% {
+        left: -768px; opacity: 1;
+    }
+    46% {
+		opacity: 0; 
+	}     
+	48% {
+		opacity: 0; 
+	}     
+	50% {
+		left: -1536px; opacity: 1; 
+	}     
+	70% {
+		left: -1536px; opacity: 1; 
+	}     
+	72% {
+		opacity: 0; 
+	}     
+	74% {
+		opacity: 0; 
+	}    
+	75% {
+		left: -2304px; opacity: 1; 
+	}   	
+	95% {
+		left: -2304px; opacity: 1; 
+	}   	
+	97% { 
+		left: -2304px; opacity: 0;
+	}   	
+	100% {
+		left: 0; opacity: 0; 
+	}
+} 
+
+@-webkit-keyframes slider {     
+	0% {
+		left: 0; opacity: 0; 
+	}     
+	2% {
+		opacity: 1; 
+	}     
+	20% {
+		left: 0; opacity: 1; 
+	}     
+	21% {
+		opacity: 0; 
+	}     
+	24% {
+		opacity: 0; 
+	}     
+	25% {
+		left: -768px; opacity: 1; 
+	}       
+	45% {
+		left: -768px; opacity: 1; 
+	}     
+	46% {
+		opacity: 0; 
+	}     
+	48% {
+		opacity: 0; 
+	}     
+	50% {
+		left: -1536px; opacity: 1; 
+	}     
+	70% {
+		left: -1536px; opacity: 1; 
+	}     
+	72% {
+		opacity: 0; 
+	}     
+	74% {
+		opacity: 0; 
+	}    
+	75% {
+		left: -2304px; opacity: 1; 
+	}   	
+	95% {
+		left: -2304px; opacity: 1; 
+	}   	
+	97% { 
+		left: -2304px; opacity: 0;
+	}   	
+	100% {
+		left: 0; opacity: 0; 
+	}
+} 
+
+
+@keyframes slider {     
+	0% {
+		left: 0; opacity: 0; 
+	}     
+	2% {
+		opacity: 1; 
+	}     
+	20% {
+		left: 0; opacity: 1; 
+	}     
+	21% {
+		opacity: 0; 
+	}     
+	24% {
+		opacity: 0; 
+	}     
+	25% {
+		left: -800px; opacity: 1; 
+	}     
+	45% {
+		left: -800px; opacity: 1; 
+	}     
+	46% {
+		opacity: 0; 
+	}     
+	48% {
+		opacity: 0; 
+	}     
+	50% {
+		left: -1600px; opacity: 1; 
+	}     
+	70% {
+		left: -1600px; opacity: 1; 
+	}     
+	72% {
+		opacity: 0; 
+	}     
+	74% {
+		opacity: 0; 
+	}    
+	75% {
+		left: -2400px; opacity: 1; 
+	}   	
+	95% {
+		left: -2400px; opacity: 1; 
+	}   	
+	97% { 
+		left: -2400px; opacity: 0; 
+	} 
+
+	100% {
+		left: 0; opacity: 0; 
+	}
+}
