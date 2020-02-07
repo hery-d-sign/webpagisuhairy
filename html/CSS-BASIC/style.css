@@ -1,0 +1,38 @@
+body{
+    background-color: #333333
+}
+#kepala{
+    font-weight: bold;
+    font-size: 30px;
+    background-color: gold;
+    text-align: center;
+}
+
+table{
+    width: 100%; border-collapse: collapse
+}
+
+.nama{
+    text-align: center;
+    background-color: #16a353;
+}
+
+.LK{
+    text-align: center;
+    background-color: #09fd09;
+}
+
+.umur{
+    text-align: center;
+    background-color: #153a41;
+}
+
+.nomor{
+    font-weight: bold;
+    font-size: 15px;
+    background-color: #00ff7f;
+    text-align: center;
+}
+
+*{font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif}
+
