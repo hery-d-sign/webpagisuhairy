@@ -222,7 +222,12 @@
         $Nim="1020125212";
         $Nama="Ararar";
         $Jurusan="Manajemen";
-        $nilai="100";
+        $harian=70*0.1;
+        $quis=65*0.15;
+        $uas=100*0.4;
+        $uts=85*0.35;
+        $nilai="$harian"+"$quis"+"$uts"+"$uas";
+
 
         if($nilai<=50){
             echo "Grade yang diperoleh oleh Nama $Nama dengan Nim $Nim dan Jurusan $Jurusan adalah : E";
@@ -249,7 +254,6 @@
         }
 
     ?>
-
     
 
 </body>
