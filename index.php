@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="assets/css/bootstrap.css.map">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css.map">
+    
 </head>
 <body>
 <!-- Syntac Navbar -->
@@ -55,7 +56,9 @@
     </ul>
   </div>
 </nav>
+
 <!-- Tutup Syntac Navbar -->
+
 
 <div class="row">
   <div class="col-md-3">
@@ -73,9 +76,13 @@
       <div class="carousel-item">
         <img src="https://haksablog.files.wordpress.com/2018/12/Desain-tanpa-judul.png" class="d-block w-100" alt="...">
       </div>
+      <div class="carousel-item">
+        <img src="https://p4.wallpaperbetter.com/wallpaper/856/896/933/fantasy-art-digital-art-jason-voorhees-freddy-krueger-wallpaper-preview.jpg" class="d-block w-100" alt="...">
+      </div>
     </div>
     </div>
 <!-- Tutup syntax Slider -->
+
 
     </div>
     <div class="col-md-3">
@@ -118,6 +125,30 @@
 
 <!-- close table -->
 
+<!--  -->
+<div class="card" style="width: 18rem;">
+  <img src="https://theartmad.com/wp-content/uploads/2015/05/Juventus-Squad-Wallpaper-Hd-6.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+
+  <!-- buka halaman -->
+  <nav aria-label="Page navigation example">
+  <ul class="pagination">
+    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+  </ul>
+</nav>
+<!-- tutup halaman -->
+
+<!--  -->
+
   <div class="container-fluid">      
     <!-- class row 1 -->
     <div class="row">
@@ -139,7 +170,7 @@
       </div>
     </div>
   </div>
-
+  
 
 
 
@@ -226,7 +257,6 @@
 
 </footer>
 <!-- Footer -->
-
 
     <!-- JS for bundle -->
     <script src="assets/js/jquery.js"></script>
