@@ -217,36 +217,36 @@
     <br>
 
 
-    <!--  -->
+    <!-- persentase nilai metode pertama -->
     <?php
         $Nim="1020125212";
         $Nama="Ararar";
         $Jurusan="Manajemen";
-        $harian=70*0.1;
-        $quis=65*0.15;
-        $uas=100*0.4;
-        $uts=85*0.35;
-        $nilai="$harian"+"$quis"+"$uts"+"$uas";
+        $harian=70;
+        $quis=65;
+        $uas=100;
+        $uts=85;
+        $nilai=($harian*10/100)+($quis*15/100)+($uts*40/100)+($uas*35/100);
 
 
         if($nilai<=50){
-            echo "Grade yang diperoleh oleh Nama $Nama dengan Nim $Nim dan Jurusan $Jurusan adalah : E";
+            echo "Grade yang diperoleh oleh Nama $Nama dengan Nim $Nim dan Jurusan $Jurusan nilai diperoleh $nilai adalah : E";
         }
 
         else if($nilai <=65){
-            echo "Grade yang diperoleh oleh Nama $Nama dengan Nim $Nim dan Jurusan $Jurusan adalah : D";
+            echo "Grade yang diperoleh oleh Nama $Nama dengan Nim $Nim dan Jurusan $Jurusan nilai diperoleh $nilai adalah : D";
         }
 
         else if($nilai <=72){
-            echo "Grade yang diperoleh oleh Nama $Nama dengan Nim $Nim dan Jurusan $Jurusan adalah : C";
+            echo "Grade yang diperoleh oleh Nama $Nama dengan Nim $Nim dan Jurusan $Jurusan nilai diperoleh $nilai adalah : C";
         }
 
         else if($nilai <=83){
-            echo "Grade yang diperoleh oleh Nama $Nama dengan Nim $Nim dan Jurusan $Jurusan adalah : B";
+            echo "Grade yang diperoleh oleh Nama $Nama dengan Nim $Nim dan Jurusan $Jurusan nilai diperoleh $nilai adalah : B";
         }
 
         else if($nilai <=100){
-            echo "Grade yang diperoleh oleh Nama $Nama dengan Nim $Nim dan Jurusan $Jurusan adalah : A";
+            echo "Grade yang diperoleh oleh Nama $Nama dengan Nim $Nim dan Jurusan $Jurusan nilai diperoleh $nilai adalah : A";
         }
 
         else{
@@ -254,6 +254,7 @@
         }
 
     ?>
+    <!-- tutup metode pertama -->
     
 
 </body>
