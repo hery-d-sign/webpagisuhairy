@@ -218,45 +218,9 @@
 
 
     <!-- persentase nilai metode pertama -->
-    <?php
-        $Nim="1020125212";
-        $Nama="Ararar";
-        $Jurusan="Manajemen";
-        $harian=70;
-        $quis=65;
-        $uas=100;
-        $uts=85;
-        $nilai=($harian*10/100)+($quis*15/100)+($uts*40/100)+($uas*35/100);
+    
 
-
-        if($nilai<=50){
-            echo "Grade yang diperoleh oleh Nama $Nama dengan Nim $Nim dan Jurusan $Jurusan nilai diperoleh $nilai adalah : E";
-        }
-
-        else if($nilai <=65){
-            echo "Grade yang diperoleh oleh Nama $Nama dengan Nim $Nim dan Jurusan $Jurusan nilai diperoleh $nilai adalah : D";
-        }
-
-        else if($nilai <=72){
-            echo "Grade yang diperoleh oleh Nama $Nama dengan Nim $Nim dan Jurusan $Jurusan nilai diperoleh $nilai adalah : C";
-        }
-
-        else if($nilai <=83){
-            echo "Grade yang diperoleh oleh Nama $Nama dengan Nim $Nim dan Jurusan $Jurusan nilai diperoleh $nilai adalah : B";
-        }
-
-        else if($nilai <=100){
-            echo "Grade yang diperoleh oleh Nama $Nama dengan Nim $Nim dan Jurusan $Jurusan nilai diperoleh $nilai adalah : A";
-        }
-
-        else{
-            echo "$Nama dengan $Nim dan $Jurusan dinyatakan tidak lulus";
-        }
-
-    ?>
-    <!-- tutup metode pertama -->
     
 
 </body>
 </html>
-
