@@ -197,6 +197,3 @@ include'header.php';
   <!-- Copyright -->
 
 </footer>
-<?php
-include'footer.php';
-?>
