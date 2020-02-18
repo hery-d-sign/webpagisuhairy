@@ -19,13 +19,15 @@
         if(isset($_POST['tambah'])){
             $buah=$_POST['mangga'];
 
-            $arraybuah=[
-                "mangga",
-                "jambu",
-                "kelapa"
+            $warna=[
+                "merah",
+                "ungu",
+                "kuning"
             ];
-            if($buah=$arraybuah[2]){
-                echo"$arraybuah[2]";
+            if($buah=$warna[0]){
+                echo"<h1 style='color:red;'>$warna[0]</h1>";
+            }else if($buah=$warna[1]){
+                echo"<h1 style='color:purple;'>$warna[1]</h1>";
             }
         }
     ?>
@@ -75,5 +77,8 @@
 
     ?>
     
+    <?php
+        include 'footer.php'
+    ?>
 </body>
 </html>
