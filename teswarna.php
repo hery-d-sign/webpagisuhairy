@@ -27,7 +27,7 @@
             echo "<p style='color: orange'>$color</p>";
         }
         else{
-            echo "<p style='color: grey'>$color</p>";
+            echo "<p style='color: dark grey'>$color</p>";
         }
     }
 ?>
