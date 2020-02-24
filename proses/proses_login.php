@@ -23,9 +23,16 @@ include '../koneksi/koneksi.php';
                     echo"<script>
                     alert(window.location.href='../latihan.php');
                     </script>";
-                }
+                }else if($data['level']=="pembeli"){
+                    $_SESSION['username']=$data['username'];
+                    $_SESSION['level']=$data['level'];
+                    $_SESSION['status']='login';
+
+                    echo"<script>
+                    alert(window.location.href='../mahasiswabootstrap.php');
+                    </script>";
             }else{
-                echo'data gagal';
+                echo"data gagal";
             }
 
             // if($username=='admin'&&$input_password=='admin123'){
@@ -37,4 +44,5 @@ include '../koneksi/koneksi.php';
             // }
 
         }
+    }
     ?>
