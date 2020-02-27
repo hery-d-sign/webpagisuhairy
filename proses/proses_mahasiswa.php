@@ -5,6 +5,7 @@ if(isset($_POST['tambah'])){
     $id=uniqid();
     $nama_mahasiswa=$_POST['nama'];
     $nim_mahasiswa=$_POST['nim'];
+    $mata_kuliah=$_POST['mata_kuliah'];
     $jurusan=$_POST['jurusan'];
     $nilai_harian=$_POST['nilaiharian'];
     $nilai_quiz=$_POST['nilaiquiz'];
@@ -24,7 +25,7 @@ if(isset($_POST['tambah'])){
         $grade='A';
     }
 
-    $mahasiswa=mysqli_query($koneksi, "insert into mahasiswa values('$id', '$nama_mahasiswa', '$nim_mahasiswa', '$jurusan', '$nilai_harian', '$nilai_quiz', '$nilai_uas', '$nilai_uts', '$nilai_akhir', '$grade')") or die (mysqli_error($mahasiswa));
+    $mahasiswa=mysqli_query($koneksi, "insert into mahasiswa values('$id', '$nama_mahasiswa', '$nim_mahasiswa', '$mata_kuliah', '$jurusan', '$nilai_harian', '$nilai_quiz', '$nilai_uas', '$nilai_uts', '$nilai_akhir', '$grade')") or die (mysqli_error($mahasiswa));
 
     if($mahasiswa){
         echo "<script>alert('Nilai Berhasil di input'); 
