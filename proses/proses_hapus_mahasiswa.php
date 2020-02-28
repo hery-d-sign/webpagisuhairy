@@ -14,4 +14,4 @@
         <script>alert('data gagal dihapus')</script>
     
 <?php   }
-}  ?>
+?>
