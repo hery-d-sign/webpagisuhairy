@@ -1,10 +1,12 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
 
     <!-- css for bootstrap grid -->
     <link rel="stylesheet" href="assets/css/bootstrap-grid.css">
@@ -41,22 +43,49 @@
       <li class="nav-item active">
         <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
       </li>
+
+      <?php if($_SESSION['level']=="penjual"){?>
+
       <li class="nav-item">
-        <a class="nav-link" href="#">Features</a>
+        <a class="nav-link" href='../diskonbootstrap.php'>Diskon</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Pricing</a>
+        <a class="nav-link" href='../latihanbiodata'>Biodata</a>
       </li>
+      
+      <?php } else if($_SESSION['level']=="pembeli"){?>
+      
+      <li class="nav-item">
+        <a class="nav-link" href="mahasiswabootstrap.php">Mahasiswa</a>
+      </li>
+
+      <?php }?>
+
+      <?php if($_SESSION['level']=="penjual"){?>
+      
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown link
+        <?php
+          echo "selamat datang".$_SESSION['username']=$data['username']."";
+        ?>
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <a class="dropdown-item" href="#">Something else here</a>
+          <a class="dropdown-item" href="logout.php">Logout</a>
         </div>
       </li>
+      <?php }else{?>
+
+        <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Login
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+        <a class="dropdown-item" href="login_bootstrap.php">Login</a>
+        </div>
+      <li>
+
+      <?php }?>
+
     </ul>
   </div>
 </nav>
