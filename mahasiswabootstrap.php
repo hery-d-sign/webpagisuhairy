@@ -48,10 +48,7 @@
     </form>
     </div>
 
-<?php
-    include 'footer.php'
-?>
-<br>
+
 
 <?php
 include 'koneksi/koneksi.php';
@@ -60,33 +57,34 @@ $tampil_nilai=mysqli_query($koneksi, "SELECT * FROM mahasiswa")or die(mysqli($ta
 
 while($data=mysqli_fetch_array($tampil_nilai)){
     if($data['nilai_akhir']<=50){
-        echo " <div class='alert alert-danger' role='alert'> Nama ".$data['nama_mahasiswa']." dengan Nim ".$data['nim_mahasiswa']." Mata Kuliah ".$data['mata_kuliah']." Jurusan ".$data['jurusan']." memperoleh nilai sebesar ".$data['nilai_akhir']." maka diperoleh grade : E <a href='edit_mahasiswa.php?id_mahasiswa=".$data['id_mahasiswa']."'type='submit' class='btn btn-info'>Update</a><br>
-
-        <a href='proses/proses_hapus_mahasiswa.php?id_mahasiswa=".$data['id_mahasiswa']."'type='submit' class='btn btn-danger' onClick='hapus();'>Hapus</a></div>";
+        echo " <div class='alert alert-danger' role='alert'> Nama ".$data['nama_mahasiswa']." dengan Nim ".$data['nim_mahasiswa']." Mata Kuliah ".$data['mata_kuliah']." Jurusan ".$data['jurusan']." memperoleh nilai sebesar ".$data['nilai_akhir']." maka diperoleh grade : E 
+        <a href='edit_mahasiswa.php?id_mahasiswa=".$data['id_mahasiswa']."'type='submit' class='btn btn-info'>Update</a><br>
+        <a href='proses/proses_hapus_mahasiswa.php?id_mahasiswa=".$data['id_mahasiswa']."'type='submit' class='btn btn-danger' onclick='return confirm(\"Yakin ingin menghapus?\")'>Hapus</a>
+        </div>";
     }
     
     else if($data['nilai_akhir']<=65){
         echo "  <div class='alert alert-warning' role='alert'> Nama ".$data['nama_mahasiswa']." dengan Nim ".$data['nim_mahasiswa']." Mata Kuliah ".$data['mata_kuliah']."  Jurusan ".$data['jurusan']." memperoleh nilai sebesar ".$data['nilai_akhir']." maka diperoleh grade : D <a href='edit_mahasiswa.php?id_mahasiswa=".$data['id_mahasiswa']."'type='submit' class='btn btn-info'>Update</a>
         
-        <a href='proses/proses_hapus_mahasiswa.php?id_mahasiswa=".$data['id_mahasiswa']."'type='submit' class='btn btn-danger' onClick='hapus();'>Hapus</a></div>";
+        <a href='proses/proses_hapus_mahasiswa.php?id_mahasiswa=".$data['id_mahasiswa']."'type='submit' class='btn btn-danger' onclick='return confirm(\"Yakin ingin menghapus?\")'>Hapus</a></div>";
     }
     
     else if($data['nilai_akhir']<=72){
         echo "  <div class='alert alert-info' role='alert'> Nama ".$data['nama_mahasiswa']." dengan Nim ".$data['nim_mahasiswa']." Mata Kuliah ".$data['mata_kuliah']." Jurusan ".$data['jurusan']." memperoleh nilai sebesar ".$data['nilai_akhir']." maka diperoleh grade : C <a href='edit_mahasiswa.php?id_mahasiswa=".$data['id_mahasiswa']."'type='submit' class='btn btn-info'>Update</a>
         
-        <a href='proses/proses_hapus_mahasiswa.php?id_mahasiswa=".$data['id_mahasiswa']."'type='submit' class='btn btn-danger' onClick='hapus();'>Hapus</a></div>";
+        <a href='proses/proses_hapus_mahasiswa.php?id_mahasiswa=".$data['id_mahasiswa']."'type='submit' class='btn btn-danger' onclick='return confirm(\"Yakin ingin menghapus?\")'>Hapus</a></div>";
     }
     
     else if($data['nilai_akhir']<=83){
         echo " <div class='alert alert-primary' role='alert'> Nama ".$data['nama_mahasiswa']." dengan Nim ".$data['nim_mahasiswa']." Mata Kuliah ".$data['mata_kuliah']." Jurusan ".$data['jurusan']." memperoleh nilai sebesar ".$data['nilai_akhir']." maka diperoleh grade : B <a href='edit_mahasiswa.php?id_mahasiswa=".$data['id_mahasiswa']."'type='submit' class='btn btn-info'>Update</a>
         
-        <a href='proses/proses_hapus_mahasiswa.php?id_mahasiswa=".$data['id_mahasiswa']."'type='submit' class='btn btn-danger' onClick='hapus();'>Hapus</a></div>";
+        <a href='proses/proses_hapus_mahasiswa.php?id_mahasiswa=".$data['id_mahasiswa']."'type='submit' class='btn btn-danger' onclick='return confirm(\"Yakin ingin menghapus?\")'>Hapus</a></div>";
     }
     
     else if($data['nilai_akhir']<=100){
         echo " <div class='alert alert-success' role='alert'> Nama ".$data['nama_mahasiswa']." dengan Nim ".$data['nim_mahasiswa']." Mata Kuliah ".$data['mata_kuliah']." Jurusan ".$data['jurusan']." memperoleh nilai sebesar ".$data['nilai_akhir']." maka diperoleh grade : A <a href='edit_mahasiswa.php?id_mahasiswa=".$data['id_mahasiswa']."'type='submit' class='btn btn-info'>Update</a>
         
-        <a href='proses/proses_hapus_mahasiswa.php?id_mahasiswa=".$data['id_mahasiswa']."'type='submit' class='btn btn-danger' onClick='hapus();'>Hapus</a></div>";
+        <a href='proses/proses_hapus_mahasiswa.php?id_mahasiswa=".$data['id_mahasiswa']."'type='submit' class='btn btn-danger' onclick='return confirm(\"Yakin ingin menghapus?\")'>Hapus</a></div>";
     }
     
     else{
@@ -94,12 +92,37 @@ while($data=mysqli_fetch_array($tampil_nilai)){
     }
 
 }
+?>
 
+<?php
+    include 'footer.php'
+?>
+<br>
+
+<script>
+    function hapus(){
+
+        
+        swal({
+            title: "Are you sure?",
+            text: "Your will not be able to recover this imaginary file!",
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonClass: "btn-danger",
+            confirmButtonText: "Yes, delete it!",
+            closeOnConfirm: false
+            },
+            function(){
+            swal("Deleted!", "Your imaginary file has been deleted.", "success");
+            });
+        }
+
+</script>
 
 
     
 
-// if (isset($_POST['tambah'])){
+<!-- // if (isset($_POST['tambah'])){
 //     $nim=$_POST['nim'];
 //     $nama=$_POST['nama'];
 //     $jurusan=$_POST['jurusan'];
@@ -111,6 +134,5 @@ while($data=mysqli_fetch_array($tampil_nilai)){
 
     // echo "nilai anda $nilai";
     // echo $contoh;
-// }
+// } -->
 
-?>
