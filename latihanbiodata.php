@@ -9,8 +9,9 @@
     ?>
 </head>
 <body>
-    <form action="proses/proses_biodata.php" method="POST" name="tambah">
-    <div class="container">
+<div class="container">
+    <form action="proses/proses_biodata.php" method="POST" name="tambah" enctype="multipart/form-data">
+    
     <div class="form-group">
         <label>Nama</label>
         <input type="text" name="nama" class="form-control col-sm-2" placeholder="masukan nama">
@@ -18,7 +19,7 @@
 
     <div class="form-group">
         <label>Alamat</label>
-        <input type="textarea" name="alamat" class="form-control col-sm-2" placeholder="masukkan alamat">
+        <input type="text" name="alamat" class="form-control col-sm-2" placeholder="masukkan alamat">
     </div>
 
     <div class="form-group">
@@ -28,7 +29,12 @@
 
     <div class="form-group">
         <label for="hobby">Hobby</label>
-        <input type="text" class="form-control col-sm-2" name="hobby" placeholder="masukkan hobby">   
+        <div class="col-sm-4">
+        <input type="checkbox" name="hobby1" id="inputEmail" value="Makan"> Makan
+        <input type="checkbox" name="hobby2" id="inputEmail" value="Jalan-jalan"> Jalan-jalan
+        <input type="checkbox" name="hobby3" id="inputEmail" value="Membaca"> Membaca
+        <input type="checkbox" name="hobby4" id="inputEmail" value="Ngoding"> Ngoding
+        </div>
     </div>
 
     <div class="form-group">
@@ -52,9 +58,21 @@
         <input type="text" name="tempat" class="form-control col-sm-2" placeholder="masukkan tempat lahir">
     </div> -->
 
-    <input type="submit" name="tambah" value="Submit">
-    </form>
+    <div class="form-group">
+        <label for="inputEmail">Upload File</label> <br>
+        <div class="btn btn-primary btn-sm-float-left">    
+        <input class="file-path validate" name="foto" type="file">
+        </div>
     </div>
+
+    <div class="form-group row">
+        <div class="col-sm-10">
+            <input type="submit" class="btn btn-primary" name="tambah" value="Submit">
+        </div>
+    </div>
+    </form>
+    
+</div>
 
 <?php
     include 'footer.php';
