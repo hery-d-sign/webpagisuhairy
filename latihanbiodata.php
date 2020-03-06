@@ -39,8 +39,8 @@
 
     <div class="form-group">
         <label>Jenis Kelamin</label>
-        <input type="radio" name="JK" value="Laki-laki">Laki-Laki;
-        <input type="radio" name="JK" value="Perempuan">Perempuan;
+        <input type="radio" name="JK" value="laki_laki">Laki-Laki;
+        <input type="radio" name="JK" value="perempuan">Perempuan;
     </div>
 
     <div class="form-group">
