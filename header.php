@@ -1,5 +1,7 @@
 <?php
 session_start();
+
+error_reporting(0);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -34,7 +36,7 @@ session_start();
 
 <!-- Syntac Navbar -->
 <nav class="navbar navbar-expand-lg navbar-light bg-success">
-  <a class="navbar-brand" href="#">Navbar</a>
+  <a class="navbar-brand" href="#"></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -67,6 +69,7 @@ session_start();
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         <?php
           echo "selamat datang".$_SESSION['username']=$data['username']."";
+
         ?>
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -75,16 +78,16 @@ session_start();
       </li>
       <?php }else{?>
 
-        <li class="nav-item dropdown">
+      <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         Login
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
         <a class="dropdown-item" href="login_bootstrap.php">Login</a>
         </div>
-      <li>
+      </li>
 
-      <?php }?>
+      <?php } ?>
 
     </ul>
   </div>
