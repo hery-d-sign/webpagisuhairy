@@ -3,35 +3,37 @@ include '../koneksi/koneksi.php';
 // error_reporting(0);
 
 if (isset($_POST['tambah'])){
-    $nama=$_POST['nama'];
+    // data diambl dari form
+    $nama=$_POST['nama_lengkap'];
     $alamat=$_POST['alamat'];
     $no_hp=$_POST['no_hp'];
-    $hobby1=$_POST['hobby1'];
-    $hobby2=$_POST['hobby2'];
-    $hobby3=$_POST['hobby3'];
-    $hobby4=$_POST['hobby4'];
+    $hobby1=(!empty($_POST['hobby1'])?$_POST['hobby1']:'');
+    $hobby2=(!empty($_POST['hobby2'])?$_POST['hobby2']:'');
+    $hobby3=(!empty($_POST['hobby3'])?$_POST['hobby3']:'');
+    $hobby4=(!empty($_POST['hobby4'])?$_POST['hobby4']:'');
     $hobby=($hobby1.','.$hobby2.','.$hobby3.','.$hobby4);
-    $jenis_kelamin=$_POST['JK'];
+    $jenis_kelamin=$_POST['jenis_kelamin'];
     $email=$_POST['email'];
-    $tanggal_lahir=$_POST['lahir'];
+    $tanggal_lahir=$_POST['tanggal_lahir'];
+    $tempat_lahir=$_POST['tempat_lahir'];
     
-    
+    // untuk upload file atau foto
     $nama_file=$_FILES['foto']['name'];
 
     $format=explode(".", $nama_file);
-    $fileExtension = end($format);
+    $fileExtension = end($format); /* file extension sifatnya bebas */
     $name_sementara=$_FILES['foto']['tmp_name'];
     $md5file = md5($nama_file) . "." . $fileExtension;
         
-    $lokasi_upload= "../upload/";
+    $lokasi_upload= "../upload/"; /* direktory penyimpanan */
 
     $fungsi_upload=move_uploaded_file($name_sementara, $lokasi_upload.$md5file);
     
-    $biodata=mysqli_query($koneksi, "insert into biodata values ('', '$nama', '$alamat', '$no_hp', '$hobby', '$tanggal_lahir', '$jenis_kelamin', '$email', '', '$md5file')")or die(mysqli_query($biodata));
+    $biodata=mysqli_query($koneksi, "INSERT INTO biodata VALUES ('', '$nama', '$alamat', '$no_hp', '$hobby', '$tanggal_lahir', '$tempat_lahir', '$jenis_kelamin', '$email', '', '$md5file')")or die(mysqli_error($biodata));
 
 
     if($biodata){
-        echo'data biodata berhasil dimasukan';
+        echo'<script>alert("data biodata berhasil dimasukan"); window.location.href="../admin/tabel_biodata.php" </script>';
     }else{
         echo'data gagal dimasukkan';
     }
