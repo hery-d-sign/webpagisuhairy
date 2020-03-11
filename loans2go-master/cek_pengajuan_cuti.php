@@ -67,7 +67,7 @@
 	<!-- Loans Section end -->
 	<section class="loans-section spad">
 		<div class="container">
-			<form class="container">
+			<form class="container" action="" method="POST" enctype="multipart/form-data">
 				<div class="form-group">
 					<label for="exampleInputEmail1">Cek Status Pengajuan :</label>
 					<input type="text" name="nama_pegawai" placeholder="masukkan kode cuti" class="form-control col-sm-6" id="exampleInputEmail1" aria-describedby="emailHelp"> <br>

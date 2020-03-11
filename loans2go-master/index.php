@@ -39,13 +39,13 @@
 	<!-- Header Section -->
 	<header class="header-section">
 		<a href="index.html" class="site-logo">
-			<img src="img/logo_apple.png" width="50px" alt=""><b>Selamat Datang Di Aplikasi E-Cuti</b>
+			<img src="img/logo_apple.png" width="50px" alt=""> <b>Selamat Datang Di Aplikasi E-Cuti</b>
 		</a>
 		<nav class="header-nav">
 			<ul class="main-menu">
-				<li><a href="pengajuan_cuti.html">Pengajuan Cuti</a></li>
-				<li><a href="cek_pengajuan_cuti.html">Pengecekan Status Cuti</a></li>
-				<li><a href="lupa_kode_cuti.html">Lupa Kode Cuti</a></li>
+				<li><a href="pengajuan_cuti.php">Pengajuan Cuti</a></li>
+				<li><a href="cek_pengajuan_cuti.php">Pengecekan Status Cuti</a></li>
+				<li><a href="lupa_kode_cuti.php">Lupa Kode Cuti</a></li>
 				<li><a href="#">Login</a></li>
 					<ul class="sub-menu">
 		</nav>

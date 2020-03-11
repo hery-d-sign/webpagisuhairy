@@ -77,7 +77,7 @@
 
 	<!-- Blog pengecekan cuti end -->
 	<section class="blog-section spad">
-	<form class="container">
+	<form class="container" action="cek_pengajuan_cuti.php" method="POST" enctype="multipart/form-data">
 		<div class="form-group">
 			<label for="exampleInputEmail1">Nama Pegawai</label>
 			<input type="text" name="nama_pegawai" class="form-control col-sm-6" id="exampleInputEmail1" aria-describedby="emailHelp">
@@ -130,13 +130,13 @@
 	<!-- Footer Section -->
 	<footer class="footer-section">
 		<div class="container">
-			<a href="index.html" class="footer-logo">
+			<!-- <a href="index.html" class="footer-logo">
 				<img src="img/logo.png" alt="">
-			</a>
+			</a> -->
 			<div class="row">
 				<div class="col-lg-3 col-sm-6">
 					<div class="footer-widget">
-						<h2>What we do</h2>
+						<!-- <h2>What we do</h2>
 						<ul>
 							<li><a href="#">Loans</a></li>
 							<li><a href="#">Car loans</a></li>
@@ -144,12 +144,12 @@
 							<li><a href="#">Home improvement loans</a></li>
 							<li><a href="#"> Wedding loans</a></li>
 							<li><a href="#">Innovative Finance ISA</a></li>
-						</ul>
+						</ul> -->
 					</div>
 				</div>
 				<div class="col-lg-3 col-sm-6">
 					<div class="footer-widget">
-						<h2>About us</h2>
+						<!-- <h2>About us</h2>
 						<ul>
 							<li><a href="#">About us</a></li>
 							<li><a href="#">Our story</a></li>
@@ -157,38 +157,38 @@
 							<li><a href="#">Meet the leadership team</a></li>
 							<li><a href="#">Awards</a></li>
 							<li><a href="#">Careers</a></li>
-						</ul>
+						</ul> -->
 					</div>
 				</div>
 				<div class="col-lg-3 col-sm-6">
 					<div class="footer-widget">
-						<h2>Legal</h2>
+						<!-- <h2>Legal</h2>
 						<ul>
 							<li><a href="#">Privacy policy</a></li>
 							<li><a href="#">Loans2go principles</a></li>
 							<li><a href="#">Website terms</a></li>
 							<li><a href="#">Cookie policy</a></li>
 							<li><a href="#">Conflicts policy</a></li>
-						</ul>
+						</ul> -->
 					</div>
 				</div>
 				<div class="col-lg-3 col-sm-6">
 					<div class="footer-widget">
-						<h2>Site Info</h2>
+						<!-- <h2>Site Info</h2>
 						<ul>
 							<li><a href="#">Support</a></li>
 							<li><a href="#">FAQ</a></li>
 							<li><a href="#">Sitemap</a></li>
 							<li><a href="#">Careers</a></li>
 							<li><a href="#">Contact us</a></li>
-						</ul>
+						</ul> -->
 					</div>
 				</div>
 			</div>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tem por incididunt ut labore et dolore mag na aliqua.  Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse potenti. Ut gravida mattis magna, non varius lorem sodales nec. In libero orci, ornare non nisl.</p>
-			<div class="copyright"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></div>
+			<!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tem por incididunt ut labore et dolore mag na aliqua.  Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse potenti. Ut gravida mattis magna, non varius lorem sodales nec. In libero orci, ornare non nisl.</p> -->
+			<!-- <div class="copyright">Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+<!-- Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a> -->
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0.</div> -->
 		</div>
 	</footer>
 	<!-- Footer Section end -->
