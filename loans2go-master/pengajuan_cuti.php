@@ -77,7 +77,7 @@
 
 	<!-- Blog pengecekan cuti end -->
 	<section class="blog-section spad">
-	<form class="container" action="cek_pengajuan_cuti.php" method="POST" enctype="multipart/form-data">
+	<form class="container" action="proses/proses_ecuti.php" method="POST" enctype="multipart/form-data">
 		<div class="form-group">
 			<label for="exampleInputEmail1">Nama Pegawai</label>
 			<input type="text" name="nama_pegawai" class="form-control col-sm-6" id="exampleInputEmail1" aria-describedby="emailHelp">
@@ -106,11 +106,11 @@
 		<div class="form-group">
 			<label>Jenis Cuti</label>
 				<select name="jenis_cuti" class="form-control col-sm-6">
-					<option value="cuti_tahunan">Cuti Tahunan</option>
-					<option value="cuti_besar">Cuti Besar</option>
-					<option value="cuti_sakit">Cuti Sakit</option>
-					<option value="cuti_bersalin">Cuti Bersalin</option>
-					<option value="cuti_alasan_penting">Cuti Alasan Penting</option>
+					<option name="cuti_tahunan" value="cuti_tahunan">Cuti Tahunan</option>
+					<option name="cuti_besar" value="cuti_besar">Cuti Besar</option>
+					<option name="cuti_sakit" value="cuti_sakit">Cuti Sakit</option>
+					<option name="cuti_bersalin" value="cuti_bersalin">Cuti Bersalin</option>
+					<option name="cuti_alasan_penting" value="cuti_alasan_penting">Cuti Dengan Alasan</option>
 				</select>
 		</div>
 
@@ -122,7 +122,7 @@
 			</div>
 			<br>
 
-		<button type="submit" class="btn btn-primary">Submit</button>
+		<button type="submit" name="submit" class="btn btn-primary">Submit</button>
 	</form>
 	</section>
 	<!-- Blog pengecekan cuti end -->
