@@ -64,31 +64,31 @@ while($data=mysqli_fetch_array($tampil_nilai)){
     }
     
     else if($data['nilai_akhir']<=65){
-        echo "  <div class='alert alert-warning' role='alert'> Nama ".$data['nama_mahasiswa']." dengan Nim ".$data['nim_mahasiswa']." Mata Kuliah ".$data['mata_kuliah']."  Jurusan ".$data['jurusan']." memperoleh nilai sebesar ".$data['nilai_akhir']." maka diperoleh grade : D <a href='edit_mahasiswa.php?id_mahasiswa=".$data['id_mahasiswa']."'type='submit' class='btn btn-info'>Update</a>
+        echo "<div class='alert alert-warning' role='alert'> Nama ".$data['nama_mahasiswa']." dengan Nim ".$data['nim_mahasiswa']." Mata Kuliah ".$data['mata_kuliah']."  Jurusan ".$data['jurusan']." memperoleh nilai sebesar ".$data['nilai_akhir']." maka diperoleh grade : D <a href='edit_mahasiswa.php?id_mahasiswa=".$data['id_mahasiswa']."'type='submit' class='btn btn-info'>Update</a>
         
         <a href='proses/proses_hapus_mahasiswa.php?id_mahasiswa=".$data['id_mahasiswa']."'type='submit' class='btn btn-danger' onclick='return confirm(\"Yakin ingin menghapus?\")'>Hapus</a></div>";
     }
     
     else if($data['nilai_akhir']<=72){
-        echo "  <div class='alert alert-info' role='alert'> Nama ".$data['nama_mahasiswa']." dengan Nim ".$data['nim_mahasiswa']." Mata Kuliah ".$data['mata_kuliah']." Jurusan ".$data['jurusan']." memperoleh nilai sebesar ".$data['nilai_akhir']." maka diperoleh grade : C <a href='edit_mahasiswa.php?id_mahasiswa=".$data['id_mahasiswa']."'type='submit' class='btn btn-info'>Update</a>
+        echo "<div class='alert alert-info' role='alert'> Nama ".$data['nama_mahasiswa']." dengan Nim ".$data['nim_mahasiswa']." Mata Kuliah ".$data['mata_kuliah']." Jurusan ".$data['jurusan']." memperoleh nilai sebesar ".$data['nilai_akhir']." maka diperoleh grade : C <a href='edit_mahasiswa.php?id_mahasiswa=".$data['id_mahasiswa']."'type='submit' class='btn btn-info'>Update</a>
         
         <a href='proses/proses_hapus_mahasiswa.php?id_mahasiswa=".$data['id_mahasiswa']."'type='submit' class='btn btn-danger' onclick='return confirm(\"Yakin ingin menghapus?\")'>Hapus</a></div>";
     }
     
     else if($data['nilai_akhir']<=83){
-        echo " <div class='alert alert-primary' role='alert'> Nama ".$data['nama_mahasiswa']." dengan Nim ".$data['nim_mahasiswa']." Mata Kuliah ".$data['mata_kuliah']." Jurusan ".$data['jurusan']." memperoleh nilai sebesar ".$data['nilai_akhir']." maka diperoleh grade : B <a href='edit_mahasiswa.php?id_mahasiswa=".$data['id_mahasiswa']."'type='submit' class='btn btn-info'>Update</a>
+        echo "<div class='alert alert-primary' role='alert'> Nama ".$data['nama_mahasiswa']." dengan Nim ".$data['nim_mahasiswa']." Mata Kuliah ".$data['mata_kuliah']." Jurusan ".$data['jurusan']." memperoleh nilai sebesar ".$data['nilai_akhir']." maka diperoleh grade : B <a href='edit_mahasiswa.php?id_mahasiswa=".$data['id_mahasiswa']."'type='submit' class='btn btn-info'>Update</a>
         
         <a href='proses/proses_hapus_mahasiswa.php?id_mahasiswa=".$data['id_mahasiswa']."'type='submit' class='btn btn-danger' onclick='return confirm(\"Yakin ingin menghapus?\")'>Hapus</a></div>";
     }
     
     else if($data['nilai_akhir']<=100){
-        echo " <div class='alert alert-success' role='alert'> Nama ".$data['nama_mahasiswa']." dengan Nim ".$data['nim_mahasiswa']." Mata Kuliah ".$data['mata_kuliah']." Jurusan ".$data['jurusan']." memperoleh nilai sebesar ".$data['nilai_akhir']." maka diperoleh grade : A <a href='edit_mahasiswa.php?id_mahasiswa=".$data['id_mahasiswa']."'type='submit' class='btn btn-info'>Update</a>
+        echo "<div class='alert alert-success' role='alert'> Nama ".$data['nama_mahasiswa']." dengan Nim ".$data['nim_mahasiswa']." Mata Kuliah ".$data['mata_kuliah']." Jurusan ".$data['jurusan']." memperoleh nilai sebesar ".$data['nilai_akhir']." maka diperoleh grade : A <a href='edit_mahasiswa.php?id_mahasiswa=".$data['id_mahasiswa']."'type='submit' class='btn btn-info'>Update</a>
         
         <a href='proses/proses_hapus_mahasiswa.php?id_mahasiswa=".$data['id_mahasiswa']."'type='submit' class='btn btn-danger' onclick='return confirm(\"Yakin ingin menghapus?\")'>Hapus</a></div>";
     }
     
     else{
-        echo" <div class='alert alert-danger' role='alert'> $nama dengan $nim dan $jurusan dinyatakan tidak lulus </div>";
+        echo"<div class='alert alert-danger' role='alert'> $nama dengan $nim dan $jurusan dinyatakan tidak lulus </div>";
     }
 
 }

@@ -8,7 +8,7 @@
 
         if($hapus){ ?>
         <script>
-        alert('data berhasil dihapus'); window.location.href="../mahasiswabootstrap.php"</script>';
+        alert('data berhasil dihapus'); window.location.href="../mahasiswabootstrap.php"</script>;
 
     <?php }else{?>
         <script>alert('data gagal dihapus');</script>;
